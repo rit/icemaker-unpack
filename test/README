@@ -1,0 +1,1 @@
+Mocha looks for the mocha.opts in this directory and it's not configurable. :(

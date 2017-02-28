@@ -1,0 +1,38 @@
+{
+  "name": "icemaker-unpack",
+  "version": "1.0.0",
+  "description": "Inject object properties into a callback using argument identifiers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R dot 'src/**/*.spec.js'",
+    "coverage": "nyc mocha -R dot 'src/**/*.spec.js'",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rit/icemaker-unpack.git"
+  },
+  "keywords": [
+    "testing",
+    "tool"
+  ],
+  "author": "Rit Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rit/icemaker-unpack/issues"
+  },
+  "homepage": "https://github.com/rit/icemaker-unpack#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2"
+  },
+  "dependencies": {
+    "acorn": "^4.0.11",
+    "lodash": "^4.17.4"
+  }
+}

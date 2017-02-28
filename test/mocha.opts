@@ -1,0 +1,5 @@
+--reporter spec
+--no-colors
+--check-leaks
+--require ./test/setup
+--timeout 3000
