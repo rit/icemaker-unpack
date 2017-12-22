@@ -1,6 +1,6 @@
 {
   "name": "icemaker-unpack",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Inject object properties into a callback using argument identifiers",
   "main": "index.js",
   "scripts": {
@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/rit/icemaker-unpack#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^3.16.1",
-    "eslint-config-airbnb-base": "^11.1.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.2.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "nyc": "^10.1.2"
+    "mocha": "^4.0.1",
+    "nyc": "^11.4.1"
   },
   "dependencies": {
-    "acorn": "^4.0.11",
+    "acorn": "^5.2.1",
     "lodash": "^4.17.4"
   }
 }
