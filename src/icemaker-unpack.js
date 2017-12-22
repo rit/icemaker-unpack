@@ -2,6 +2,11 @@ const _ = require("lodash");
 const acorn = require("acorn");
 const walker = require("acorn/dist/walk");
 
+const REJECT_TYPES = {
+  RestElement: "Rest parameter is not allowed",
+  ObjectPattern: "Object pattern is not allowed",
+};
+
 
 function walk(src) {
   let ast;
@@ -14,7 +19,10 @@ function walk(src) {
   }
   const nodes = ["FunctionDeclaration", "ArrowFunctionExpression"];
   const found = walker.findNodeAt(ast, 0, null, nodeType => _(nodes).includes(nodeType));
-  return _.map(found.node.params, n => n.name);
+  return _.map(found.node.params, (param) => {
+    if (REJECT_TYPES[param.type]) throw new Error(REJECT_TYPES[param.type]);
+    return param.name;
+  });
 }
 
 

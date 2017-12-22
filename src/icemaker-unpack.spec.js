@@ -48,4 +48,18 @@ describe("unpack", () => {
     };
     expect(run).to.throw(Error);
   });
+
+  it("rejects callback with rest parameters", () => {
+    const run = () => {
+      unpack({}, (...rest) => {}); // eslint-disable-line no-unused-vars
+    };
+    expect(run).to.throw(Error, /Rest parameter/);
+  });
+
+  it("rejects callback with object pattern", () => {
+    const run = () => {
+      unpack({}, ({ one }) => {}); // eslint-disable-line no-unused-vars
+    };
+    expect(run).to.throw(Error, /Object pattern/);
+  });
 });
